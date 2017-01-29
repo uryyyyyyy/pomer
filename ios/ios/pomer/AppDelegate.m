@@ -30,9 +30,9 @@
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = rootView;
-  self.window.rootViewController = rootViewController;
+  self.rootViewController = [UIViewController new];
+  self.rootViewController.view = rootView;
+  self.window.rootViewController = self.rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
 }
@@ -53,6 +53,18 @@ didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
   if (error == nil) {
     NSLog(@"signIn success: %@", user.userID);
+    GIDAuthentication *authentication = user.authentication;
+    FIRAuthCredential *credential =
+    [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
+                                     accessToken:authentication.accessToken];
+    [[FIRAuth auth] signInWithCredential:credential completion:^(FIRUser *user, NSError *error2) {
+      if (error2 == nil) {
+        NSLog(@"firebase auth success");
+        NSLog(@"userId %@", user.email);
+      }else{
+        NSLog(@"signInWithCredential fail: %@", error2.localizedDescription);
+      }
+    }];
   } else {
     NSLog(@"signIn fail: %@", error.localizedDescription);
   }

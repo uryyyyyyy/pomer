@@ -13,11 +13,11 @@ import {
   NativeModules
 } from 'react-native';
 
-const {MyLogger} = require('NativeModules');
+const {MyLogger, FirebaseAuth} = require('NativeModules');
 
 export default class pomer extends Component {
   render() {
-    MyLogger.callFunc(100)
+    FirebaseAuth.openView()
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>

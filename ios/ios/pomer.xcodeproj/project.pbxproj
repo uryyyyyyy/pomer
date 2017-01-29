@@ -28,6 +28,9 @@
 		E7B3DE451E3DE027000D122D /* MyLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3DE441E3DE027000D122D /* MyLogger.m */; };
 		E7B3DE471E3DE03E000D122D /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B3DE461E3DE03E000D122D /* MyLogger.swift */; };
 		E7B3DE991E3DE609000D122D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7B3DE981E3DE609000D122D /* GoogleService-Info.plist */; };
+		E7B3DE9C1E3DEC09000D122D /* FirebaseAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3DE9B1E3DEC09000D122D /* FirebaseAuth.m */; };
+		E7B3DE9E1E3DEC13000D122D /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B3DE9D1E3DEC13000D122D /* FirebaseAuth.swift */; };
+		E7B3DEA01E3DF211000D122D /* FirebaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B3DE9F1E3DF211000D122D /* FirebaseAuthViewController.swift */; };
 		ED29A37C4E8676E46D112FBB /* Pods_pomerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CB1556158575B62FBD1E54 /* Pods_pomerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +252,9 @@
 		E7B3DE441E3DE027000D122D /* MyLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogger.m; sourceTree = "<group>"; };
 		E7B3DE461E3DE03E000D122D /* MyLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
 		E7B3DE981E3DE609000D122D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7B3DE9B1E3DEC09000D122D /* FirebaseAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAuth.m; sourceTree = "<group>"; };
+		E7B3DE9D1E3DEC13000D122D /* FirebaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		E7B3DE9F1E3DF211000D122D /* FirebaseAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +380,7 @@
 		13B07FAE1A68108700A75B9A /* pomer */ = {
 			isa = PBXGroup;
 			children = (
+				E7B3DE9A1E3DEBAE000D122D /* firebase */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -479,6 +486,16 @@
 				00E356EE1AD99517003FC87E /* pomerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E7B3DE9A1E3DEBAE000D122D /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				E7B3DE9B1E3DEC09000D122D /* FirebaseAuth.m */,
+				E7B3DE9D1E3DEC13000D122D /* FirebaseAuth.swift */,
+				E7B3DE9F1E3DF211000D122D /* FirebaseAuthViewController.swift */,
+			);
+			name = firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -928,9 +945,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7B3DE451E3DE027000D122D /* MyLogger.m in Sources */,
+				E7B3DEA01E3DF211000D122D /* FirebaseAuthViewController.swift in Sources */,
 				E7B3DE471E3DE03E000D122D /* MyLogger.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				E7B3DE9E1E3DEC13000D122D /* FirebaseAuth.swift in Sources */,
+				E7B3DE9C1E3DEC09000D122D /* FirebaseAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

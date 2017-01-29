@@ -1,15 +1,13 @@
 import Foundation
 
-@objc(MyLogger)
-class MyLogger: NSObject {
+@objc(FirebaseAuth)
+class FirebaseAuth: NSObject {
   
-  @objc(callFunc:)
-  func callFunc(typeParam: NSInteger) {
-    print("typeParam");
-    print(typeParam);
+  @objc(openView)
+  func openView() {
+    print("openView");
     
-    let uiViewController = UIViewController()
-    uiViewController.view.backgroundColor = UIColor.gray;
+    let uiViewController = FirebaseAuthViewController()
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let rootViewController:UIViewController = appDelegate.rootViewController
     rootViewController.present(uiViewController, animated: true, completion: nil)

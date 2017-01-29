@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'pomer' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for pomer
+  pod 'Firebase/Core', '3.11.0'
+  pod 'Firebase/Auth', '3.11.0'
+  pod 'GoogleSignIn', '4.0.1'
+
+  target 'pomerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

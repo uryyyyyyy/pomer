@@ -9,11 +9,15 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules
 } from 'react-native';
+
+const {MyLogger} = require('NativeModules');
 
 export default class pomer extends Component {
   render() {
+    MyLogger.callFunc(100)
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>

@@ -15,7 +15,4 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, GIDSignInDelegate>
 
-@property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) UIViewController *rootViewController;
-
 @end

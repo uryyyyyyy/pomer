@@ -8,8 +8,12 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+@import Firebase;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, GIDSignInDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
 

@@ -11,7 +11,7 @@ class MyLogger: NSObject {
     let uiViewController = UIViewController()
     uiViewController.view.backgroundColor = UIColor.gray;
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let rootViewController:UIViewController = appDelegate.rootViewController
+    let rootViewController:UIViewController = appDelegate.rootViewController!
     rootViewController.present(uiViewController, animated: true, completion: nil)
   }
 }

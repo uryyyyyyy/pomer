@@ -10,8 +10,8 @@ class FirebaseAuthViewController: UIViewController, GIDSignInUIDelegate {
     super.viewDidLoad()
     self.view.backgroundColor = UIColor.cyan
     
-    let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-    button.backgroundColor = .green
+    let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+    button.backgroundColor = .gray
     button.setTitle("Google SignIn", for: .normal)
     button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     

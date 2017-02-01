@@ -9,6 +9,9 @@ import com.facebook.react.shell.MainReactPackage
 import com.facebook.soloader.SoLoader
 
 import java.util.Arrays
+import com.github.uryyyyyyy.pomer.toast.MyToastPackage
+
+
 
 class MainApplication : Application(), ReactApplication {
 
@@ -19,7 +22,8 @@ class MainApplication : Application(), ReactApplication {
 
         override fun getPackages(): List<ReactPackage> {
             return Arrays.asList<ReactPackage>(
-                    MainReactPackage()
+                    MainReactPackage(),
+                    MyToastPackage()
             )
         }
     }

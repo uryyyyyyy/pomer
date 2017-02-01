@@ -9,11 +9,15 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules
 } from 'react-native';
+
+const {MyToastAndroid} = NativeModules;
 
 export default class pomer extends Component {
   render() {
+    MyToastAndroid.show('Awsome', MyToastAndroid.SHORT);
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>

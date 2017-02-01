@@ -1,4 +1,4 @@
-package com.pomer;
+package com.github.uryyyyyyy.pomer;
 
 import com.facebook.react.ReactActivity;
 

@@ -1,4 +1,4 @@
-package com.pomer;
+package com.github.uryyyyyyy.pomer;
 
 import android.app.Application;
 import android.util.Log;

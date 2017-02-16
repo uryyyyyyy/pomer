@@ -8,10 +8,11 @@ class MyLogger: NSObject {
     print("typeParam");
     print(typeParam);
     
-    let uiViewController = UIViewController()
-    uiViewController.view.backgroundColor = UIColor.gray;
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let rootViewController:UIViewController = appDelegate.rootViewController!
-    rootViewController.present(uiViewController, animated: true, completion: nil)
+    FIRAnalytics.setUserPropertyString("favorite", forName: "curry")
+    
+    FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
+      kFIRParameterContentType:"count" as NSObject,
+      kFIRParameterItemID:"1" as NSObject
+      ])
   }
 }

@@ -10,7 +10,8 @@ import {
   StyleSheet,
   Text,
   View,
-  NativeModules
+  NativeModules,
+  Button
 } from 'react-native';
 
 const {MyLogger, FirebaseAuth} = require('NativeModules');
@@ -30,6 +31,10 @@ export default class pomer extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Button
+          title="Log Firebase"
+          onPress={() => MyLogger.callFunc(100)}
+        />
       </View>
     );
   }

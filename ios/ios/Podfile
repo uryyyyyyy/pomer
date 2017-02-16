@@ -9,6 +9,7 @@ target 'pomer' do
   pod 'Firebase/Core', '3.11.0'
   pod 'Firebase/Auth', '3.11.0'
   pod 'GoogleSignIn', '4.0.1'
+  pod 'GoogleTagManager', '~> 5.0'
 
   target 'pomerTests' do
     inherit! :search_paths

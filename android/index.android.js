@@ -9,11 +9,16 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules,
+  Button
 } from 'react-native';
+
+const {MyToastAndroid} = NativeModules;
 
 export default class pomer extends Component {
   render() {
+    MyToastAndroid.show('Awsome', MyToastAndroid.SHORT);
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -26,6 +31,18 @@ export default class pomer extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Button
+        title="Click"
+        onPress={() => MyToastAndroid.showModal()}
+        />
+        <Button
+          title="show user"
+          onPress={() => MyToastAndroid.showCurrentUser()}
+        />
+        <Button
+          title="send event"
+          onPress={() => MyToastAndroid.sendEvent()}
+        />
       </View>
     );
   }

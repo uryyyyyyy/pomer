@@ -52,4 +52,5 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 
-/android/app/google-services.json
+google-services.json
+GTM-TGCHWCH.json

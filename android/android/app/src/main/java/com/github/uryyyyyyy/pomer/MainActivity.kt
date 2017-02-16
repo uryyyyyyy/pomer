@@ -1,5 +1,6 @@
 package com.github.uryyyyyyy.pomer
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -22,5 +23,14 @@ class MainActivity : ReactActivity() {
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image")
         Log.i("myActivitysssss", this.mFirebaseAnalytics?.toString())
         this.mFirebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        Log.d(TAG, "onActivityResult")
+    }
+
+    companion object {
+        private val TAG = "MainActivity"
+        public val ACTIVITY_FLAG = 2
     }
 }
